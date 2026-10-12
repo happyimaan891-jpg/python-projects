@@ -43,7 +43,8 @@ def view_expenses(expenses):
 
 def total_expenses(expenses):
     total = sum(exp['amount'] for exp in expenses)
-    print(print(f"\nTotal Expenses: ${total:.2f}"))
+    print(f"\nTotal Expenses: ${total:.2f}")
+            
 
 def main():
     expenses = []

@@ -9,16 +9,23 @@ def guessing_game():
     while guess != secret_number:
         try:
             guess = int(input("Guess a number between 1 and 10: "))
+
+            if guess < 1 or guess > 10:
+                print("Please enter a number between 1 and 10.")
+                continue
+
             attempts += 1
-            
+
             if guess < secret_number:
                 print("Too low! Try higher.")
             elif guess > secret_number:
                 print("Too high! Try lower.")
             else:
                 print(f"Congratulations! You won. You found it in {attempts} attempts.")
+
         except ValueError:
             print("Please enter a valid number!")
+
 
 guessing_game()
 
